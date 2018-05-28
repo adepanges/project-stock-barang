@@ -1,0 +1,33 @@
+.DS_Store
+
+resources/cache/blade/*
+!resources/cache/blade/index.html
+
+restoApp/cache/*
+!restoApp/cache/index.html
+
+restoApp/logs/*
+!restoApp/logs/index.html
+
+!restoApp/*/.htaccess
+
+composer.lock
+/vendor/
+
+# IDE Files
+#-------------------------
+/nbproject/
+.idea/*
+
+## Sublime Text cache files
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+/tests/tests/
+/tests/results/
+
+package-lock\.json
+
+resources/logs/
