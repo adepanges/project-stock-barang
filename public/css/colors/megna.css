@@ -47,11 +47,11 @@ body {
 }
 /*Right panel*/
 .right-sidebar .rpanel-title {
-  background: #ff7676;
+  background: #f33155;
 }
 /*Bread Crumb*/
 .bg-title .breadcrumb .active {
-  color: #ff7676;
+  color: #f33155;
 }
 /*Sidebar*/
 .sidebar {
@@ -73,15 +73,15 @@ body {
   background: rgba(0, 0, 0, 0.07);
 }
 #side-menu > li > a.active {
-  background: #ff7676;
+  background: #f33155;
   color: #ffffff;
   font-weight: 500;
 }
 #side-menu ul > li > a:hover {
-  color: #ff7676;
+  color: #f33155;
 }
 #side-menu ul > li > a.active {
-  color: #ff7676;
+  color: #f33155;
   font-weight: 500;
 }
 .user-profile .user-pro-body .u-dropdown {
@@ -92,37 +92,37 @@ body {
   background-color: #707cd2 !important;
 }
 .bg-theme-dark {
-  background-color: #ff7676 !important;
+  background-color: #f33155 !important;
 }
 /*Button*/
 .btn-custom {
-  background: #ff7676;
-  border: 1px solid #ff7676;
+  background: #f33155;
+  border: 1px solid #f33155;
   color: #ffffff;
 }
 .btn-custom:hover {
-  background: #ff7676;
+  background: #f33155;
   opacity: 0.8;
   color: #ffffff;
-  border: 1px solid #ff7676;
+  border: 1px solid #f33155;
 }
 /*Custom tab*/
 .customtab li.active a,
 .customtab li.active a:hover,
 .customtab li.active a:focus {
-  border-bottom: 2px solid #ff7676;
-  color: #ff7676;
+  border-bottom: 2px solid #f33155;
+  color: #f33155;
 }
 .tabs-vertical li.active a,
 .tabs-vertical li.active a:hover,
 .tabs-vertical li.active a:focus {
-  background: #ff7676;
-  border-right: 2px solid #ff7676;
+  background: #f33155;
+  border-right: 2px solid #f33155;
 }
 /*Nav-pills*/
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:focus,
 .nav-pills > li.active > a:hover {
-  background: #ff7676;
+  background: #f33155;
   color: #ffffff;
 }

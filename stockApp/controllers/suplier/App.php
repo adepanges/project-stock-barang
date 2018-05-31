@@ -15,38 +15,37 @@ class App extends Resto_Controller {
 	public function index()
 	{
         $this->_restrict_access('web');
-        $this->load->model('product_model');
 
         $this->_set_data([
-            'title' => 'Management Product',
+            'title' => 'Management Suplier',
         ]);
-        $this->blade->view('inc/product/app', $this->data);
+        $this->blade->view('inc/suplier/app', $this->data);
 	}
 
     public function save()
     {
-        $product_id = (int) $this->input->post('product_id');
-        if($product_id) $this->_restrict_access('rest');
+        $suplier_id = (int) $this->input->post('suplier_id');
+        if($suplier_id) $this->_restrict_access('rest');
         else $this->_restrict_access('rest');
 
-        $this->load->model('product_model');
+        $this->load->model('suplier_model');
 
         $data = [
             'name' => $this->input->post('name'),
-            'type' => $this->input->post('type'),
-            'unit_price' => $this->input->post('unit_price'),
+            'telephone' => $this->input->post('telephone'),
+            'address' => $this->input->post('address'),
             'status' => (int) $this->input->post('status')
         ];
 
-        if(!$product_id)
+        if(!$suplier_id)
         {
             // tambah
-            $res = $this->product_model->add($data);
+            $res = $this->suplier_model->add($data);
         }
         else
         {
             // ubah
-            $res = $this->product_model->upd($data, $product_id);
+            $res = $this->suplier_model->upd($data, $suplier_id);
         }
 
         if($res)

@@ -9,12 +9,14 @@ $(document).ready(function () {
 
     $(function () {
         $(".preloader").fadeOut();
+        $('#side-menu').metisMenu();
     });
 
     /* ===== Theme Settings ===== */
 
     $(".open-close").on("click", function () {
-        body.toggleClass("show-sidebar");
+        body.toggleClass("show-sidebar").toggleClass("hide-sidebar");
+        $(".sidebar-head .open-close i").toggleClass("ti-menu");
     });
 
     /* ===== Open-Close Right Sidebar ===== */
@@ -60,14 +62,9 @@ $(document).ready(function () {
 
                 if (width < 1170) {
                     body.addClass('content-wrapper');
-                    $('.sidebar-nav').addClass('slimscrollsidebar');
+                    $(".sidebar-nav, .slimScrollDiv").css("overflow-x", "visible").parent().css("overflow", "visible");
                 } else {
                     body.removeClass('content-wrapper');
-                    $('.sidebar-nav').removeClass('slimscrollsidebar');
-                }
-
-                if (width < 700) {
-                    $('#side-menu').metisMenu();
                 }
 
                 height = height - topOffset;
@@ -175,9 +172,9 @@ $(document).ready(function () {
     });
     $('.slimscrollsidebar').slimScroll({
         height: '100%',
-        position: 'left',
+        position: 'right',
         size: "6px",
-        color: 'rgba(0,0,0,0.5)'
+        color: 'rgba(0,0,0,0.3)'
     });
     $('.chat-list').slimScroll({
         height: '100%',
@@ -215,13 +212,5 @@ $(document).ready(function () {
 
     $(".navbar-toggle").on("click", function () {
         $(".navbar-toggle i").toggleClass("ti-menu").addClass("ti-close");
-    });
-
-    /* ===== Mega Menu ===== */
-
-    $(".mega-nav > .nav-second-level").width($(window).width());
-
-    $(window).on("resize", function () {
-        $(".mega-nav > .nav-second-level").width($(window).width());
     });
 });

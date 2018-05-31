@@ -32,7 +32,7 @@ $(document).ready(function(){
             serverSide: true,
             bInfo: false,
             ajax: {
-                url: document.app.site_url + '/product/get',
+                url: document.app.site_url + '/suplier/get',
                 type: 'POST'
             },
             language: {
@@ -48,6 +48,8 @@ $(document).ready(function(){
                     }
                 },
                 { data: "name" },
+                { data: "telephone" },
+                { data: "address" },
                 {
                     data: "status",
                     render: function ( data, type, full, meta ) {
@@ -57,7 +59,7 @@ $(document).ready(function(){
                     }
                 },
                 {
-                    data: 'product_id',
+                    data: 'suplier_id',
                     width: "12%",
                     orderable: false,
                     render: function ( data, type, full, meta ) {
@@ -77,7 +79,7 @@ $(document).ready(function(){
 function add(){
     $('#FormData')[0].reset();
     formPopulate('#FormData', {
-        product_id: 0
+        suplier_id: 0
     })
     $('#formModal').modal({
         backdrop: 'static',
@@ -89,7 +91,7 @@ function upd(id){
     $('.preloader').fadeIn();
     $.ajax({
         method: "POST",
-        url: document.app.site_url+'/product/get/byid/'+id
+        url: document.app.site_url+'/suplier/get/byid/'+id
     })
     .done(function( response ) {
         $('.preloader').fadeOut();
@@ -108,7 +110,7 @@ $('#btnSaveFormData').click(function(e){
         $('.preloader').fadeIn();
         $.ajax({
             method: "POST",
-            url: document.app.site_url+'/product/app/save',
+            url: document.app.site_url+'/suplier/app/save',
             data: data
         })
         .done(function( response ) {
@@ -154,7 +156,7 @@ function del(id){
             $('.preloader').fadeIn();
             $.ajax({
                 method: "POST",
-                url: document.app.site_url+'/product/del/index/'+id
+                url: document.app.site_url+'/suplier/del/index/'+id
             })
             .done(function( response ) {
                 $('.preloader').fadeOut();

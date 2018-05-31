@@ -22,7 +22,7 @@
         <script src="{{ base_url('plugins/bower_components/switchery/dist/switchery.min.js') }}"></script>
         <script src="{{ base_url('js/validator.js') }}"></script>
 
-        <script src="{{ base_url('js/module/admin/product.js') }}" type="text/javascript"></script>
+        <script src="{{ base_url('js/module/admin/suplier.js') }}" type="text/javascript"></script>
 @endsection
 
 @section('header')
@@ -40,6 +40,8 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Name</th>
+                                    <th>Telephone</th>
+                                    <th>Address</th>
                                     <th>Status</th>
                                     <th>
                                         Action
@@ -58,26 +60,24 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="exampleModalLabel1">Product</h4> </div>
+                            <h4 class="modal-title" id="exampleModalLabel1">Suplier</h4> </div>
                         <div class="modal-body">
                             <form id="FormData" data-toggle="validator" data-delay="100">
-                                <input type="hidden" name="product_id">
+                                <input type="hidden" name="suplier_id">
                                 <div class="form-group">
                                     <label for="recipient-name" class="control-label">Nama</label>
                                     <input type="text" class="form-control" name="name" data-error="Hmm, Nama harap diisi" required>
                                     <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="message-text" class="control-label">Tipe</label>
-                                    <select class="form-control" name="type" data-error="Hmm, Tipe harap diisi dan valid" required>
-                                        <option value="DRINK">Drink</option>
-                                        <option value="FOOD">Food</option>
-                                    </select>
+                                    <label for="recipient-name" class="control-label">Telephone</label>
+                                    <input type="text" class="form-control" name="telephone" data-error="Hmm, Telephone harap diisi" required>
                                     <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="recipient-name" class="control-label">Harga</label>
-                                    <input type="number" class="form-control" name="unit_price" data-error="Hmm, harga harap diisi" required>
+                                    <label for="recipient-name" class="control-label">Address</label>
+                                    <textarea class="form-control" name="address" data-error="Hmm, Address harap diisi" required>
+                                    </textarea>
                                     <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="form-group">

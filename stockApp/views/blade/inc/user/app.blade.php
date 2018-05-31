@@ -27,7 +27,7 @@
 
 @section('header')
 @include('main-inc.default.top_navigation')
-@include('main-inc.default.admin_sidebar')
+@include('main-inc.default.default_sidebar')
 @endsection
 
 @section('content')

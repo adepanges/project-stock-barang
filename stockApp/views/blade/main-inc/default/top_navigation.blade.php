@@ -5,16 +5,18 @@
                 <div class="top-left-part">
                     <!-- Logo -->
                     <a class="logo" href="{{ base_url() }}">
-                        <span class="hidden-xs">
-                            <!--This is dark logo text-->
-                            <img src="{{ base_url('images/logo/logo.jpeg') }}" alt="home" class="dark-logo" width="90px" />
-                            <!--This is light logo text-->
-                            <img src="{{ base_url('images/logo/logo.jpeg') }}" alt="home" class="light-logo" width="90px" />
-                         </span>
+                        <!--This is dark logo text-->
+                        <img src="{{ base_url('images/logo/logo.png') }}" alt="home" class="dark-logo" width="50px" />
+                        <!--This is light logo text-->
+                        <img src="{{ base_url('images/logo/logo.png') }}" alt="home" class="light-logo" width="50px" />
                      </a>
-                     <span style="font-size: 20px;">Mutiara Kafe</span>
+                     <span class="hidden-xs" style="font-size: 20px;">StockSys</span>
                 </div>
                 <!-- /Logo -->
+
+                <ul class="nav navbar-top-links navbar-left">
+                    <li><a href="javascript:void(0)" class="open-close waves-effect waves-light"><i class="ti-menu"></i></a></li>
+                </ul>
 
                 <!-- This is the message dropdown -->
                 <ul class="nav navbar-top-links navbar-right pull-right">
